@@ -51,23 +51,25 @@ class TransaksiController extends Controller
         return redirect('/');
     }
     public function create(Request $request){
-        Transaksi::create([
-            'id_transaksi'=>$request->id_transaksi,
+        $transaksi = Transaksi::create([
+            
             'id_admin'=>$request->id_admin,
             'tgl_trx'=>$request->tgl_trx,
             'no_nota'=>$request->no_nota,
             'status_trx'=>$request->status_trx
         ]);
-        $simpan = Transaksi_detail::create([
-            'id_detail'=>$request->id_detail,
-            'id_transaksi'=>$request->id_transaksi,
+        echo $transaksi->id_transaksi;
+        //dd($transaksi);
+        $transaksi = Transaksi_detail::create([
+            
+            'id_transaksi'=>$transaksi->id_transaksi,
             'id_barang'=>$request->id_barang,
             'jenis_trx'=>$request->jenis_trx,
             'harga_trx'=>$request->harga_trx,
             'jumlah_trx'=>$request->jumlah_trx,
             'detail_status'=>$request->detail_status
         ]);
-        
+        echo $transaksi->id_detail;
         return redirect('/');
     }
     public function edit($id){

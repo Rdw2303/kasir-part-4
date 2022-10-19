@@ -80,20 +80,18 @@
         </div>
         <div class="modal-body">
           <div class="row">
-        <div class="form-group col-6">
-  <label for="nama">Id Barang</label>
-    <input type="text" class="form-control"  name="id_barang"  value="{{ 'Brg-'.$kd }}" readOnly="" required>
-  </div>
+        
         <div class="form-group col-6">
   <label for="nama">Barang Kode</label>
     <input type="text" class="form-control"  name="barang_kode"  required>
     </div>
-        </div>
-    <div class="row">
+        
         <div class="form-group col-6">
   <label for="nama">Barang Nama</label>
     <input type="text" class="form-control"  name="barang_nama"   required>
   </div>
+</div>
+<div class="row">
   <div class="form-group col-6">
   <label for="nama">Id Jenis</label>
   <select name="id_jenis"  class="form-control ">
@@ -103,9 +101,7 @@
       @endforeach
 </select>
     </div>
-</div>
-<div class="row">
-        <div class="form-group col-4">
+        <div class="form-group col-6">
   <label for="nama">Id Supplier</label>
   <select name="id_suplier"  class="form-control ">
       <option >Pilih Nama</option>
@@ -114,11 +110,13 @@
       @endforeach
 </select>
   </div>
-  <div class="form-group col-4">
+  </div>
+  <div class="row">
+  <div class="form-group col-6">
   <label for="nama">Harga Jual</label>
     <input type="text" class="form-control"  name="harga_jual"   required>
   </div>
-  <div class="form-group col-4">
+  <div class="form-group col-6">
   <label for="nama">Barang Status</label>
     <input type="text" class="form-control"  name="barang_status"   required>
   </div>

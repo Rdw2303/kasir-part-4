@@ -79,26 +79,23 @@
         </div>
         <div class="modal-body">
           <div class="row">
-        <div class="form-group col-6">
-  <label for="nama">Id Admin</label>
-    <input type="text" class="form-control"  name="id_admin"  value="{{ 'Adm-'.$kd }}" readOnly="" required>
-  </div>
-  <div class="form-group col-6">
+        
+  <div class="form-group col-4">
   <label for="nama">Username</label>
     <input type="text" class="form-control"  name="username"  required>
     </div>
-</div>
-    <div class="row">
-        <div class="form-group col-6">
+
+    
+        <div class="form-group col-4">
   <label for="nama">Password</label>
     <input type="text" class="form-control"  name="password"   required>
   </div>
-  <div class="form-group col-6">
+  <div class="form-group col-4">
   <label for="nama">Level</label>
     <input type="text" class="form-control"  name="level"  required>
     </div>
 </div>
-    <div class="row">
+<div class="row">
         <div class="form-group col-6">
   <label for="nama">Nama</label>
     <input type="text" class="form-control"  name="nama"   required>
@@ -106,6 +103,7 @@
   <div class="form-group col-6">
   <label for="nama">Status</label>
     <input type="text" class="form-control"  name="status"  required>
+    </div>
     </div>
     
         

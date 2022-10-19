@@ -29,13 +29,14 @@ class SupplierController extends Controller
         return redirect('/supplier');
     }
     public function create(Request $request){
-        Supplier::create([
-            'id_suplier'=>$request->id_suplier,
+        $supplier = Supplier::create([
+            
             'nama'=>$request->nama,
             'alamat'=>$request->alamat,
             'phone'=>$request->phone,
             'status'=>$request->status
         ]);
+        echo $supplier->id_suplier;
         return redirect('/supplier');
     }
     public function edit($id){

@@ -29,14 +29,15 @@ class AdminController extends Controller
         return redirect('/admin');
     }
     public function create(Request $request){
-        Admin::create([
-            'id_admin'=>$request->id_admin,
+        $admin = Admin::create([
+            
             'username'=>$request->username,
             'password'=>$request->password,
             'level'=>$request->level,
             'nama'=>$request->nama,
             'status'=>$request->status
         ]);
+        echo $admin->id_admin;
         return redirect('/admin');
     }
     public function edit($id){

@@ -77,15 +77,12 @@
         </div>
         <div class="modal-body">
           <div class="row">
-        <div class="form-group col-4">
-  <label for="nama">Id Supplier</label>
-    <input type="text" class="form-control"  name="id_suplier"  value="{{ 'Sup-'.$kd }}" readOnly=""  required>
-  </div>
-  <div class="form-group col-4">
+        
+  <div class="form-group col-6">
   <label for="nama">Nama</label>
     <input type="text" class="form-control"  name="nama"  required>
     </div>
-    <div class="form-group col-4">
+    <div class="form-group col-6">
     <label for="nama">Alamat</label>
     <input type="text" class="form-control"  name="alamat"  required>
     </div>

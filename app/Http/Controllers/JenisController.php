@@ -8,20 +8,9 @@ class JenisController extends Controller
 {
     public function index(){
         $jenis = Jenis::all();
-        $q = DB::table('jenis')->select(DB::raw('MAX(RIGHT(id_jenis,2)) as kode'));
-        $kd = "";
-        if($q->count()>0){
-            foreach($q->get() as $k){
-                $tmp = ((int)$k->kode)+1;
-                $kd = sprintf("%03s",$tmp);
-            
-            
-        }
-    }else{
-        $kd = "001";
-    }
+        //
         //return "Jns-".$kd;
-        return view ('Jenis/index',['jenis'=>$jenis,'kd'=>$kd]);
+        return view ('Jenis/index',['jenis'=>$jenis]);
     }
     public function hapus($id){
         $jenis = Jenis::find($id);
@@ -29,11 +18,12 @@ class JenisController extends Controller
         return redirect('/jenis');
     }
     public function create(Request $request){
-        Jenis::create([
-            'id_jenis'=>$request->id_jenis,
+        $jenis = Jenis::create([
+            
             'jenis_nama'=>$request->jenis_nama,
             'jenis_status'=>$request->jenis_status
         ]);
+        echo $jenis->id_jenis;
         return redirect('/jenis');
     }
     public function edit($id){

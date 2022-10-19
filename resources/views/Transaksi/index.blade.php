@@ -79,11 +79,8 @@
         </div>
         <div class="modal-body">
           <div class="row">
-        <div class="form-group col-4">
-  <label for="nama">Id Transaksi</label>
-    <input type="text" class="form-control"  name="id_transaksi"  value="{{ 'Trs-'.$kd }}" readOnly=""  required>
-  </div>
-  <div class="form-group col-4">
+        
+  <div class="form-group col-6">
   <label for="nama">Id  Admin</label>
   <select name="id_admin"  class="form-control ">
       <option >Pilih Level</option>
@@ -92,7 +89,7 @@
       @endforeach
 </select>
     </div>
-    <div class="form-group col-4">
+    <div class="form-group col-6">
     <label for="nama">Tanggal Transaksi</label>
     <input type="date" class="form-control"  name="tgl_trx"  required>
     </div>
@@ -111,11 +108,8 @@
         </div>
         <div class="container">
           <div class="row">
-          <div class="form-group col-4">
-    <label for="nama">Id Detail</label>
-    <input type="text" class="form-control"  name="id_detail" readOnly="" value="{{'Dtl-'.$no}}"  required>
-    </div>
-        <div class="form-group col-4">
+          
+        <div class="form-group col-6">
     <label for="nama">Id Barang</label>
     <select name="id_barang"  class="form-control ">
       <option >Pilih Nama Barang</option>
@@ -124,7 +118,7 @@
       @endforeach
 </select>
     </div>
-    <div class="form-group col-4">
+    <div class="form-group col-6">
     <label for="nama">Transaksi Jenis</label>
     <input type="text" class="form-control"  name="jenis_trx"  required>
     </div>

@@ -40,8 +40,8 @@ class BarangController extends Controller
         return redirect('/barang');
     }
     public function create(Request $request){
-        Barang::create([
-            'id_barang'=>$request->id_barang,
+        $barang = Barang::create([
+            
             'barang_kode'=>$request->barang_kode,
             'barang_nama'=>$request->barang_nama,
             'id_jenis'=>$request->id_jenis,
@@ -49,6 +49,7 @@ class BarangController extends Controller
             'harga_jual'=>$request->harga_jual,
             'barang_status'=>$request->barang_status        
         ]);
+        echo $barang->id_barang;
         return redirect('/barang');
     }
     public function edit($id){

@@ -33,27 +33,28 @@
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
-                  <th scope="col">Id Detail</th>
-                  <th scope="col">Id Transaksi</th>
+                  <th scope="col">Id Detail Transaksi</th>
                   <th scope="col">Id Barang</th>
-                  <th scope="col">Jenis</th>
-                  <th scope="col">Harga</th>
-                  <th scope="col">Jumlah</th>
-                  <th scope="col">Detail Transaksi</th>
-                  
+                  <th scope="col">Transaksi Jenis</th>
+                  <th scope="col">Transaksi Harga</th>
+                  <th scope="col">Transaksi Jumlah</th>
+                  <th scope="col">Transaksi Detail Status</th>
+                  <th scope="col">Aksi</th>
                   </tr>
                   </thead>
                   <tbody>
                 @foreach($detail_trx as $d)
                 <tr>
                     <td>{{$d->id_detail}}</td>
-                    <td>{{$d->id_transaksi}}</td>
-                    <td>{{$d->id_barang}}</td>
+                    <td>{{$d->barang_nama}}</td>
                     <td>{{$d->jenis_trx}}</td>
                     <td>{{$d->harga_trx}}</td>
                     <td>{{$d->jumlah_trx}}</td>
                     <td>{{$d->detail_status}}</td>
-                
+                    <td>
+                      <a href="" class="btn btn-warning">Edit</a>
+                      <a href="" class="btn btn-danger">Hapus</a>
+                    </td>
                 
                   
                   </tr>
@@ -79,23 +80,13 @@
   </div>
         <div class="form-group col-6">
   <label for="nama">Id Transaksi</label>
-  <select name="id_transaksi"  class="form-control ">
-      <option >Pilih Tgl Transaksi</option>
-      @foreach($transaksi as $item)
-      <option value="{{$item->id_transaksi}}">{{$item->tgl_trx}}</option>
-      @endforeach
-</select>
+  <input type="text" class="form-control"  name="id_transaksi"  required>
     </div>
         </div>
     <div class="row">
         <div class="form-group col-6">
   <label for="nama">Id Barang</label>
-  <select name="id_barang"  class="form-control ">
-      <option >Pilih Nama Barang</option>
-      @foreach($barang as $item)
-      <option value="{{$item->id_barang}}">{{$item->barang_nama}}</option>
-      @endforeach
-</select>
+  <input type="text" class="form-control"  name="id_barang"  required>
   </div>
   <div class="form-group col-6">
   <label for="nama">Jenis</label>

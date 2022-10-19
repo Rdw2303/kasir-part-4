@@ -74,9 +74,7 @@
         </div>
         <div class="modal-body">
         <div class="form-group">
-  <label for="nama">Id Jenis</label>
-    <input type="text" class="form-control"  name="id_jenis" readOnly="" value="{{ 'Jns-'.$kd }}" required>
-  </div>
+  
   <label for="nama">Jenis Nama</label>
     <input type="text" class="form-control"  name="jenis_nama"  required>
     <label for="nama">Jenis Status</label>

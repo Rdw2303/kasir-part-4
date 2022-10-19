@@ -11,12 +11,12 @@ class Transaksi_DetailController extends Controller
 {
     public function index($id){
         //$detail_trx = Transaksi_detail::all();
-        $transaksi = Transaksi::all();
-        $barang = Barang::all();
+        //$transaksi = Transaksi::all();
+        //$barang = Barang::all();
         $detail_trx = DB::table('transaksi_details')
         ->where('id_transaksi',$id)
         //->join('transaksis','transaksi_details.id_transaksi','=','transaksis.id_transaksi')
-        //->join('barangs','transaksi_details.id_barang','=','barangs.id_barang')
+        ->join('barangs','transaksi_details.id_barang','=','barangs.id_barang')
         //->select('transaksis.tgl_trx','barangs.barang_nama','transaksi_details.*')
         ->get();
         $q = DB::table('transaksi_details')->select(DB::raw('MAX(RIGHT(id_detail,2)) as kode'));
@@ -34,7 +34,7 @@ class Transaksi_DetailController extends Controller
         //dd($detail_trx);
         //return "Dtl-".$kd;
         //return $detail_trx;
-        return view('Detail/index',['detail_trx'=>$detail_trx,'kd'=>$kd,'transaksi'=>$transaksi,'barang'=>$barang]);
+        return view('Detail/index',['detail_trx'=>$detail_trx,'kd'=>$kd]);
     }
     public function hapus($id){
         $detail_trx = Transaksi_detail::find($id);
